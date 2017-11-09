@@ -1320,7 +1320,7 @@ def _download_to_local(boto_conn, s3_path, fp, num_result_dir, delim=None, skip_
             path = name.split("/")
             dir = path[0].replace("_$folder$", "", 1)
             unique_paths.add(dir)
-            if len(path) > 1:
+            if len(path) > 1 and '_tmp.' not in path[1]:
                 file = int(path[1])
                 if dir not in files:
                     files[dir] = []
