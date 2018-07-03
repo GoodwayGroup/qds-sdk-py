@@ -1282,7 +1282,7 @@ def write_headers(qlog,fp):
     fp.write(col_names)
 
 
-def _download_to_local(boto_conn, s3_path, fp, num_result_dir, delim=None, skip_data_avail_check=False):
+def _download_to_local(boto_conn, s3_path, fp, num_result_dir, delim=None, skip_data_avail_check=True):
     '''
     Downloads the contents of all objects in s3_path into fp
 
