@@ -255,8 +255,7 @@ class Command(Resource):
                     # If the delim is not None, then both text and binary modes
                     # work.
 
-                    _download_to_local(boto_conn, s3_path, fp, num_result_dir, delim=delim,
-                                       skip_data_avail_check=isinstance(self, PrestoCommand))
+                    _download_to_local(boto_conn, s3_path, fp, num_result_dir, delim=delim)
             else:
                 fp.write(",".join(r['result_location']))
 
